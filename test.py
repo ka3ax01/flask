@@ -1,15 +1,10 @@
-from flask import Flask
+from flask import Flask, render_templates
 
 app = Flask(__name__)
+
+@app.route('/')
 def index() ->str:
-  str="""
-  <html>
-  <body>
-  <h1>Hello World</h1>
-  </body>
-  </html>
-  """
-  return str
+  return render_template('index.html')
 
 if __name__ == '__main__':
   app.run(debug=True)
