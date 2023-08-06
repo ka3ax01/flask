@@ -17,8 +17,7 @@ def login():
     if request.method == 'POST':
         if request.form['username'] == 'admin':
             return redirect(url_for('success'))
-        else:
-            abort(401)
+        abort(401)
     else:
         return redirect(url_for('index'))
 
