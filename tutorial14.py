@@ -27,3 +27,6 @@ def success() -> str:
     returns string messaging that everything is right
     '''
     return 'logged in succesfully'
+
+if __name__ == '__main__':
+    app.run(debug=True)
